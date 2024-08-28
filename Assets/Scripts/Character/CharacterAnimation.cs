@@ -5,8 +5,8 @@ using UnityEngine;
 public class CharacterAnimation : MonoBehaviour
 {
     //! Components
-    Rigidbody2D rigidBody;
-        Vector3 lastMousePosition;
+    Animator characterAnimation;
+    Vector3 lastMousePosition;
 
     SpriteRenderer spriteRenderer;
 
@@ -22,29 +22,35 @@ public class CharacterAnimation : MonoBehaviour
 
     void InitializeComponents()
     {
-        rigidBody = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-                lastMousePosition = Input.mousePosition;
+        characterAnimation = GetComponent<Animator>();
 
     }
 
     void FlipSprite()
     {
-        Vector3 currentMousePosition = Input.mousePosition;
-        float horizontalMovement = currentMousePosition.x - lastMousePosition.x;
+        float movement = GetMouseHorizontalMovement();
 
-        if (horizontalMovement < 0)
+        if (movement < 0)
         {
             // Moving left
             spriteRenderer.flipX = false;
+            characterAnimation.SetBool("isSwimming", true);
         }
-        else if (horizontalMovement > 0)
+        else if (movement > 0)
         {
             // Moving right
             spriteRenderer.flipX = true;
+            characterAnimation.SetBool("isSwimming", true);
         }
+    }
 
+    float GetMouseHorizontalMovement()
+    {
+        Vector3 currentMousePosition = Input.mousePosition;
+        float horizontalMovement = currentMousePosition.x - lastMousePosition.x;
         // Update last mouse position
         lastMousePosition = currentMousePosition;
+        return horizontalMovement;
     }
 }

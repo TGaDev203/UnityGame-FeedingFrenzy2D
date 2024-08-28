@@ -165,7 +165,7 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Angelfish_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 319
         width: 122
         height: 103
@@ -272,7 +272,7 @@ TextureImporter:
         serializedVersion: 2
         x: 631
         y: 319
-        width: 122
+        width: 123
         height: 103
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -314,7 +314,7 @@ TextureImporter:
         serializedVersion: 2
         x: 127
         y: 213
-        width: 122
+        width: 121
         height: 103
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -398,7 +398,7 @@ TextureImporter:
         serializedVersion: 2
         x: 631
         y: 213
-        width: 122
+        width: 125
         height: 103
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -417,10 +417,10 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Angelfish_12
       rect:
         serializedVersion: 2
-        x: 1
-        y: 107
-        width: 122
-        height: 103
+        x: 3
+        y: 110
+        width: 112
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -439,9 +439,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 127
-        y: 107
-        width: 122
-        height: 103
+        y: 111
+        width: 113
+        height: 99
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -459,10 +459,10 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Angelfish_14
       rect:
         serializedVersion: 2
-        x: 253
-        y: 107
-        width: 122
-        height: 103
+        x: 254
+        y: 112
+        width: 114
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -480,10 +480,10 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Angelfish_15
       rect:
         serializedVersion: 2
-        x: 379
-        y: 107
-        width: 122
-        height: 103
+        x: 380
+        y: 112
+        width: 119
+        height: 98
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -501,10 +501,10 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Angelfish_16
       rect:
         serializedVersion: 2
-        x: 506
-        y: 107
-        width: 122
-        height: 103
+        x: 507
+        y: 111
+        width: 121
+        height: 99
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -522,10 +522,10 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Angelfish_17
       rect:
         serializedVersion: 2
-        x: 630
-        y: 107
-        width: 122
-        height: 103
+        x: 635
+        y: 110
+        width: 117
+        height: 99
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -543,9 +543,9 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Angelfish_18
       rect:
         serializedVersion: 2
-        x: 757
+        x: 760
         y: 107
-        width: 122
+        width: 117
         height: 103
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -564,9 +564,9 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Angelfish_19
       rect:
         serializedVersion: 2
-        x: 883
+        x: 889
         y: 107
-        width: 122
+        width: 109
         height: 103
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -585,10 +585,10 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Angelfish_20
       rect:
         serializedVersion: 2
-        x: 1009
+        x: 1013
         y: 107
-        width: 126
-        height: 106
+        width: 114
+        height: 104
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -606,10 +606,10 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Angelfish_21
       rect:
         serializedVersion: 2
-        x: 1135
+        x: 1139
         y: 107
-        width: 126
-        height: 106
+        width: 119
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -627,10 +627,10 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Angelfish_22
       rect:
         serializedVersion: 2
-        x: 1261
+        x: 1268
         y: 107
-        width: 126
-        height: 106
+        width: 118
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -648,10 +648,10 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Angelfish_23
       rect:
         serializedVersion: 2
-        x: 1387
+        x: 1390
         y: 107
-        width: 126
-        height: 106
+        width: 119
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -669,10 +669,10 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Angelfish_24
       rect:
         serializedVersion: 2
-        x: 1513
+        x: 1514
         y: 107
-        width: 126
-        height: 106
+        width: 115
+        height: 101
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -690,10 +690,10 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Angelfish_25
       rect:
         serializedVersion: 2
-        x: 1639
+        x: 1641
         y: 107
-        width: 126
-        height: 106
+        width: 109
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -711,10 +711,10 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Angelfish_26
       rect:
         serializedVersion: 2
-        x: 1765
+        x: 1769
         y: 107
-        width: 126
-        height: 106
+        width: 101
+        height: 101
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -734,8 +734,8 @@ TextureImporter:
         serializedVersion: 2
         x: 1
         y: 1
-        width: 122
-        height: 103
+        width: 110
+        height: 100
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -755,8 +755,8 @@ TextureImporter:
         serializedVersion: 2
         x: 127
         y: 1
-        width: 122
-        height: 103
+        width: 115
+        height: 104
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -774,9 +774,9 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Angelfish_29
       rect:
         serializedVersion: 2
-        x: 253
+        x: 264
         y: 1
-        width: 122
+        width: 101
         height: 103
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -797,7 +797,7 @@ TextureImporter:
         serializedVersion: 2
         x: 379
         y: 1
-        width: 122
+        width: 104
         height: 103
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -818,7 +818,7 @@ TextureImporter:
         serializedVersion: 2
         x: 505
         y: 1
-        width: 122
+        width: 109
         height: 103
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
