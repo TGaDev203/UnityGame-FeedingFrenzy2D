@@ -32,10 +32,9 @@ public class Characters : MonoBehaviour
     {
         // Get the mouse position in world space
         Vector3 mousePosition = Input.mousePosition;
-        mousePosition.z = 10f; // Adjust z value to get the coordinate in 3D space
         Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
-        // Retain the z axis of the capsule object
+        // Retain the z axis of the capsule object to avoid change height (z)
         worldMousePosition.z = transform.position.z;
 
         // Apply mouse sensitivity
@@ -67,16 +66,5 @@ public class Characters : MonoBehaviour
         Cursor.visible = false;
         // Limit mouse cursor in game window
         Cursor.lockState = CursorLockMode.Confined;
-
-        // Move character to mouse position
-        Vector3 mousePosition = Input.mousePosition;
-        mousePosition.z = 10f;
-        Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-
-        // Retain the z axis of the capsule object
-        worldMousePosition.z = transform.position.z;
-
-        // Directly set the position of the character to the mouse position
-        transform.position = worldMousePosition;
     }
 }
