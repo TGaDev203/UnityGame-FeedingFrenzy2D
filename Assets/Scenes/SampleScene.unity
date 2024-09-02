@@ -703,10 +703,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1050ef06922a2ad4bbb5fe6e940cf665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftPadding: 0.6
-  rightPadding: 0.6
-  upperPadding: 0.5
-  lowerPadding: 0.5
+  leftPadding: 0.55
+  rightPadding: 0.55
+  upperPadding: 0.55
+  lowerPadding: 0.55
+  smoothTime: 0.15
 --- !u!114 &730579348
 MonoBehaviour:
   m_ObjectHideFlags: 0

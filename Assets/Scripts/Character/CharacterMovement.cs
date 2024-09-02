@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Characters : MonoBehaviour
@@ -12,34 +9,37 @@ public class Characters : MonoBehaviour
     [SerializeField] float rightPadding;
     [SerializeField] float upperPadding;
     [SerializeField] float lowerPadding;
-    
+    [Header("Smooth Time")]
+    [SerializeField] float smoothTime = 0.1f;
+
+    private Vector3 targetPosition;
+    private Vector3 velocity = Vector3.zero;
 
     void Update()
     {
         if (isPlaying)
         {
-        HandleMovementByMouse();
+            HandleMovementByMouse();
         }
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
             StartGame();
         }
-
-        // if (Input.GetKeyDown(KeyCode.Escape))
-        // {
-        //     EndGame();
-        // }
     }
 
     void HandleMovementByMouse()
     {
-        // Get mouse cursor position on the screen
+        // Get the mouse position in world space
         Vector3 mousePosition = Input.mousePosition;
-        // Convert mouse cursor position from screen coordinates to world coordinates
-        mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        mousePosition.z = 10f; // Adjust z value to get the coordinate in 3D space
+        Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+
         // Retain the z axis of the capsule object
-        mousePosition.z = transform.position.z;
+        worldMousePosition.z = transform.position.z;
+
+        // Apply mouse sensitivity
+        Vector3 adjustedMousePosition = worldMousePosition;
 
         // Calculate screen bounds in world units
         Camera camera = Camera.main;
@@ -48,14 +48,16 @@ public class Characters : MonoBehaviour
 
         float xMin = -screenWidth + leftPadding;
         float xMax = screenWidth - rightPadding;
-        float yMin = -screenHeight + upperPadding;
-        float yMax = screenHeight - lowerPadding;
+        float yMin = -screenHeight + lowerPadding;
+        float yMax = screenHeight - upperPadding;
 
-        mousePosition.x = Mathf.Clamp(mousePosition.x, xMin, xMax);
-        mousePosition.y = Mathf.Clamp(mousePosition.y, yMin, yMax);
+        // Clamp the position within the bounds
+        adjustedMousePosition.x = Mathf.Clamp(adjustedMousePosition.x, xMin, xMax);
+        adjustedMousePosition.y = Mathf.Clamp(adjustedMousePosition.y, yMin, yMax);
 
-        // Move the capsule object to the mouse cursor position
-        transform.position = mousePosition;
+        // Smoothly move the capsule object towards the target position
+        targetPosition = adjustedMousePosition;
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
     }
 
     void StartGame()
@@ -65,13 +67,16 @@ public class Characters : MonoBehaviour
         Cursor.visible = false;
         // Limit mouse cursor in game window
         Cursor.lockState = CursorLockMode.Confined;
-    }
 
-    // void EndGame()
-    // {
-    //     isPlaying = false;
-    //     Cursor.visible = true;
-    //     Cursor.lockState = CursorLockMode.None;
-    //     UnityEditor.EditorApplication.isPlaying = false;
-    // }
+        // Move character to mouse position
+        Vector3 mousePosition = Input.mousePosition;
+        mousePosition.z = 10f;
+        Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
+
+        // Retain the z axis of the capsule object
+        worldMousePosition.z = transform.position.z;
+
+        // Directly set the position of the character to the mouse position
+        transform.position = worldMousePosition;
+    }
 }
