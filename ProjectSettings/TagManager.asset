@@ -9,7 +9,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Eatable Prey
   - Water
   - UI
   - 
@@ -44,6 +44,9 @@ TagManager:
     locked: 0
   - name: Background
     uniqueID: 250589537
+    locked: 0
+  - name: Prey
+    uniqueID: 3926150949
     locked: 0
   - name: Character
     uniqueID: 200366459

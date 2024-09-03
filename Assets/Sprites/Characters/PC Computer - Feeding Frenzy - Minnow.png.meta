@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -160,7 +160,469 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: PC Computer - Feeding Frenzy - Minnow_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 55
+        width: 60
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6edaa133da203c408af80e17aebc42c
+      internalID: 438251262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Feeding Frenzy - Minnow_1
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 55
+        width: 60
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ec18d8ad36bf74c8f08c59829cf77f
+      internalID: 1924610382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Feeding Frenzy - Minnow_2
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 55
+        width: 60
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5281d6ebe4c929147ba99acc8c8062bd
+      internalID: 1186519436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Feeding Frenzy - Minnow_3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 55
+        width: 60
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df22f27cdd2c99545a45fc4f3e121930
+      internalID: 1352430526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Feeding Frenzy - Minnow_4
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 55
+        width: 60
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 367094bd36cb14d4aa8ac1ffc11b7dce
+      internalID: -1342424006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Feeding Frenzy - Minnow_5
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 55
+        width: 60
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf0280536af1d7e4e84cac5bae3cb449
+      internalID: -1604086506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Feeding Frenzy - Minnow_6
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 55
+        width: 60
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fbfb48f1704bab4eb9ee294f953ca97
+      internalID: 1917272006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Feeding Frenzy - Minnow_7
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 55
+        width: 62
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d473781e32bcbae4897a71014bbca876
+      internalID: -564756442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Feeding Frenzy - Minnow_8
+      rect:
+        serializedVersion: 2
+        x: 530
+        y: 55
+        width: 60
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c46e8846d81b95f4683c327220ac7ed6
+      internalID: -1486932003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Feeding Frenzy - Minnow_9
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 55
+        width: 60
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d42cd872e56ff5b45a06589250c80528
+      internalID: 1106537747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Feeding Frenzy - Minnow_10
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 55
+        width: 60
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f37937124cb56349bb8237561f1141e
+      internalID: -1913664244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Feeding Frenzy - Minnow_11
+      rect:
+        serializedVersion: 2
+        x: 728
+        y: 55
+        width: 60
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c45f5e64ef5835d4cb0df776e20023c0
+      internalID: 129202272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Feeding Frenzy - Minnow_12
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 55
+        width: 60
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05a8d7c28c57bea45aca894b54f56b94
+      internalID: -582348164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Feeding Frenzy - Minnow_13
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 55
+        width: 60
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 050056fb4d305a14d932fd93bbaa0591
+      internalID: -483162770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Feeding Frenzy - Minnow_14
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 55
+        width: 62
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd27ab97b74526419f5e626dcef2f3a
+      internalID: 330412148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Feeding Frenzy - Minnow_15
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 7
+        width: 61
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5664027b9b380f248b67a2096f5da99b
+      internalID: 1216182134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Feeding Frenzy - Minnow_16
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 7
+        width: 59
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0d7d79cbd597874d95d521eb3e8c5c6
+      internalID: 750940351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Feeding Frenzy - Minnow_17
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 7
+        width: 59
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a888e6e35dd2b0c40a1631f3f09256e9
+      internalID: 217297600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Feeding Frenzy - Minnow_18
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 7
+        width: 61
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e94bfe178e394f545a14f81d91cf87fa
+      internalID: -857250930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Feeding Frenzy - Minnow_19
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 7
+        width: 61
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a8eceba5d587843b206714d5d48ca0
+      internalID: 816539431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Feeding Frenzy - Minnow_20
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 7
+        width: 61
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d8f86d75e74a6489c38f757eae3bd7
+      internalID: -373536360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PC Computer - Feeding Frenzy - Minnow_21
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 7
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2500d681131614449d70302dd8598cd
+      internalID: 1252897018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -171,7 +633,37 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PC Computer - Feeding Frenzy - Minnow_0: 438251262
+      PC Computer - Feeding Frenzy - Minnow_1: 1924610382
+      PC Computer - Feeding Frenzy - Minnow_10: -1913664244
+      PC Computer - Feeding Frenzy - Minnow_11: 129202272
+      PC Computer - Feeding Frenzy - Minnow_12: -582348164
+      PC Computer - Feeding Frenzy - Minnow_13: -483162770
+      PC Computer - Feeding Frenzy - Minnow_14: 330412148
+      PC Computer - Feeding Frenzy - Minnow_15: 1216182134
+      PC Computer - Feeding Frenzy - Minnow_16: 750940351
+      PC Computer - Feeding Frenzy - Minnow_17: 217297600
+      PC Computer - Feeding Frenzy - Minnow_18: -857250930
+      PC Computer - Feeding Frenzy - Minnow_19: 816539431
+      PC Computer - Feeding Frenzy - Minnow_2: 1186519436
+      PC Computer - Feeding Frenzy - Minnow_20: -373536360
+      PC Computer - Feeding Frenzy - Minnow_21: 1252897018
+      PC Computer - Feeding Frenzy - Minnow_22: -843198819
+      PC Computer - Feeding Frenzy - Minnow_23: -1831214422
+      PC Computer - Feeding Frenzy - Minnow_24: -324321695
+      PC Computer - Feeding Frenzy - Minnow_25: -1409874730
+      PC Computer - Feeding Frenzy - Minnow_26: 289728056
+      PC Computer - Feeding Frenzy - Minnow_27: 889166241
+      PC Computer - Feeding Frenzy - Minnow_28: 2066781473
+      PC Computer - Feeding Frenzy - Minnow_29: 124232536
+      PC Computer - Feeding Frenzy - Minnow_3: 1352430526
+      PC Computer - Feeding Frenzy - Minnow_4: -1342424006
+      PC Computer - Feeding Frenzy - Minnow_5: -1604086506
+      PC Computer - Feeding Frenzy - Minnow_6: 1917272006
+      PC Computer - Feeding Frenzy - Minnow_7: -564756442
+      PC Computer - Feeding Frenzy - Minnow_8: -1486932003
+      PC Computer - Feeding Frenzy - Minnow_9: 1106537747
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

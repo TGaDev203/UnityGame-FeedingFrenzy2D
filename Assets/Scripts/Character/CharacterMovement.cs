@@ -13,7 +13,7 @@ public class Characters : MonoBehaviour
     [Header("Smooth Time")]
     [SerializeField] private float smoothTime;
     [SerializeField] private float mouseSensitivity;
-
+    
     private Vector3 targetPosition;
     private Vector3 velocity = Vector3.zero;
 

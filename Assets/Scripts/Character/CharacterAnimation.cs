@@ -3,25 +3,30 @@ using UnityEngine;
 public class CharacterAnimation : MonoBehaviour
 {
     //! Components
+    // Define a small threshold to prevent continuous flipping
+    [SerializeField] private float flipThreshold;
+    [SerializeField] private LayerMask _layerEatable;
+
     private Animator characterAnimation;
     private Vector3 lastMousePosition;
     private SpriteRenderer spriteRenderer;
     private bool wasFlipped;
-
-    // Define a small threshold to prevent continuous flipping
-    [SerializeField] private float flipThreshold;
+    private Rigidbody2D rigidBody;
+    // private PreyAnimation preyAnimation;
 
     private void Awake()
     {
         InitializeComponents();
-        lastMousePosition = Input.mousePosition;
-        wasFlipped = spriteRenderer.flipX;
     }
 
     private void InitializeComponents()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         characterAnimation = GetComponent<Animator>();
+        rigidBody = GetComponent<Rigidbody2D>();
+        // preyAnimation = GetComponent<PreyAnimation>();
+        wasFlipped = spriteRenderer.flipX;
+        lastMousePosition = Input.mousePosition;
     }
 
     private void Update()
@@ -48,7 +53,7 @@ public class CharacterAnimation : MonoBehaviour
             }
         }
 
-        characterAnimation.SetBool("isSwimming", true);
+        characterAnimation.SetBool("isIdling", true);
     }
 
     private float GetMouseHorizontalMovement()
@@ -68,6 +73,16 @@ public class CharacterAnimation : MonoBehaviour
         {
             characterAnimation.SetTrigger("turning");
             wasFlipped = isCurrentlyFlipped;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        PreyAnimation preyAnimation = other.GetComponent<PreyAnimation>();
+        if (rigidBody.IsTouchingLayers(_layerEatable))
+        {
+            characterAnimation.SetTrigger("eating");
+            preyAnimation.DestroyPrey();
         }
     }
 }
