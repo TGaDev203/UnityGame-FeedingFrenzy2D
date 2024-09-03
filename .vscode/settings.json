@@ -56,5 +56,8 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "UnityGame-FeedingFrenzy2D.sln"
+    "dotnet.defaultSolution": "UnityGame-FeedingFrenzy2D.sln",
+    "cSpell.words": [
+        "Cinemachine"
+    ]
 }

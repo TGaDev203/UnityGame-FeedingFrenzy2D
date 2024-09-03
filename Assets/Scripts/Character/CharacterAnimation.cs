@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterAnimation : MonoBehaviour
@@ -10,17 +8,14 @@ public class CharacterAnimation : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private bool wasFlipped;
 
+    // Define a small threshold to prevent continuous flipping
+    [SerializeField] private float flipThreshold;
+
     private void Awake()
     {
         InitializeComponents();
         lastMousePosition = Input.mousePosition;
         wasFlipped = spriteRenderer.flipX;
-    }
-
-    private void Update()
-    {
-        FlipSprite();
-        HandleFlipAnimation();
     }
 
     private void InitializeComponents()
@@ -29,19 +24,28 @@ public class CharacterAnimation : MonoBehaviour
         characterAnimation = GetComponent<Animator>();
     }
 
+    private void Update()
+    {
+        FlipSprite();
+        HandleFlipAnimation();
+    }
+
     private void FlipSprite()
     {
         float movement = GetMouseHorizontalMovement();
 
-        if (movement < 0)
+        if (Mathf.Abs(movement) > flipThreshold)
         {
-            // Moving left
-            spriteRenderer.flipX = false;
-        }
-        else if (movement > 0)
-        {
-            // Moving right
-            spriteRenderer.flipX = true;
+            if (movement < 0)
+            {
+                // Moving left
+                spriteRenderer.flipX = false;
+            }
+            else if (movement > 0)
+            {
+                // Moving right
+                spriteRenderer.flipX = true;
+            }
         }
 
         characterAnimation.SetBool("isSwimming", true);

@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class Characters : MonoBehaviour
 {
-    //! Components
     private bool isPlaying = false;
+
     [Header("Padding")]
-    [SerializeField] private float leftPadding;
-    [SerializeField] private float rightPadding;
+    [SerializeField] private float leftPadding = 0.5f;
+    [SerializeField] private float rightPadding = 0.5f;
     [SerializeField] private float upperPadding;
     [SerializeField] private float lowerPadding;
+
     [Header("Smooth Time")]
-    [SerializeField] private float smoothTime = 0.1f;
+    [SerializeField] private float smoothTime;
+    [SerializeField] private float mouseSensitivity;
 
     private Vector3 targetPosition;
     private Vector3 velocity = Vector3.zero;
@@ -34,27 +36,30 @@ public class Characters : MonoBehaviour
         Vector3 mousePosition = Input.mousePosition;
         Vector3 worldMousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
 
-        // Retain the z axis of the capsule object to avoid change height (z)
+        // Retain the z axis of the character to avoid changing height (z)
         worldMousePosition.z = transform.position.z;
 
         // Apply mouse sensitivity
-        Vector3 adjustedMousePosition = worldMousePosition;
+        Vector3 adjustedMousePosition = (worldMousePosition - transform.position) * mouseSensitivity + transform.position;
 
-        // Calculate screen bounds in world units
+        // Calculate screen bounds in world units using viewport space
         Camera camera = Camera.main;
-        float screenWidth = camera.orthographicSize * camera.aspect;
-        float screenHeight = camera.orthographicSize;
+        
+        // Convert viewport bounds to world space
+        Vector3 lowerLeft = camera.ViewportToWorldPoint(new Vector3(0, 0, camera.nearClipPlane));
+        Vector3 upperRight = camera.ViewportToWorldPoint(new Vector3(1, 1, camera.nearClipPlane));
 
-        float xMin = -screenWidth + leftPadding;
-        float xMax = screenWidth - rightPadding;
-        float yMin = -screenHeight + lowerPadding;
-        float yMax = screenHeight - upperPadding;
+        // Apply padding
+        float xMin = lowerLeft.x + leftPadding;
+        float xMax = upperRight.x - rightPadding;
+        float yMin = lowerLeft.y + lowerPadding;
+        float yMax = upperRight.y - upperPadding;
 
         // Clamp the position within the bounds
         adjustedMousePosition.x = Mathf.Clamp(adjustedMousePosition.x, xMin, xMax);
         adjustedMousePosition.y = Mathf.Clamp(adjustedMousePosition.y, yMin, yMax);
 
-        // Smoothly move the capsule object towards the target position
+        // Smoothly move the character towards the target position
         targetPosition = adjustedMousePosition;
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
     }
