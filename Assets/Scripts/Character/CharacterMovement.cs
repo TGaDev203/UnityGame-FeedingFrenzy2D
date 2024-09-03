@@ -3,19 +3,19 @@ using UnityEngine;
 public class Characters : MonoBehaviour
 {
     //! Components
-    bool isPlaying = false;
+    private bool isPlaying = false;
     [Header("Padding")]
-    [SerializeField] float leftPadding;
-    [SerializeField] float rightPadding;
-    [SerializeField] float upperPadding;
-    [SerializeField] float lowerPadding;
+    [SerializeField] private float leftPadding;
+    [SerializeField] private float rightPadding;
+    [SerializeField] private float upperPadding;
+    [SerializeField] private float lowerPadding;
     [Header("Smooth Time")]
-    [SerializeField] float smoothTime = 0.1f;
+    [SerializeField] private float smoothTime = 0.1f;
 
     private Vector3 targetPosition;
     private Vector3 velocity = Vector3.zero;
 
-    void Update()
+    private void Update()
     {
         if (isPlaying)
         {
@@ -28,7 +28,7 @@ public class Characters : MonoBehaviour
         }
     }
 
-    void HandleMovementByMouse()
+    private void HandleMovementByMouse()
     {
         // Get the mouse position in world space
         Vector3 mousePosition = Input.mousePosition;
@@ -59,7 +59,7 @@ public class Characters : MonoBehaviour
         transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
     }
 
-    void StartGame()
+    private void StartGame()
     {
         isPlaying = true;
         // Hide mouse cursor

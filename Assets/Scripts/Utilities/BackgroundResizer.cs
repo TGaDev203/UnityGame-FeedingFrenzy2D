@@ -2,14 +2,24 @@ using UnityEngine;
 
 public class BackgroundResizer : MonoBehaviour
 {
-    public SpriteRenderer spriteRenderer;
+    private SpriteRenderer spriteRenderer;
 
-    void Start()
+    private void Awake()
+    {
+        InitializeComponents();
+    }
+
+    private void InitializeComponents ()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void Start()
     {
         ResizeBackground();
     }
 
-    void ResizeBackground()
+    private void ResizeBackground()
     {
         // Get the size of the sprite
         Vector2 spriteSize = spriteRenderer.sprite.bounds.size;

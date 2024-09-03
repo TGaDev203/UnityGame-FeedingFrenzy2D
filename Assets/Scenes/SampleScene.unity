@@ -457,7 +457,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c25c8e1895aa05b4a8fb916ba862b546, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 585254572}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,7 +706,7 @@ MonoBehaviour:
   rightPadding: 0.55
   upperPadding: 0.55
   lowerPadding: 0.55
-  smoothTime: 0.15
+  smoothTime: 0.3
 --- !u!114 &730579348
 MonoBehaviour:
   m_ObjectHideFlags: 0

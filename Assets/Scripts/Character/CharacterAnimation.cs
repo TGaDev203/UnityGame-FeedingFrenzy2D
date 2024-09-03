@@ -5,29 +5,31 @@ using UnityEngine;
 public class CharacterAnimation : MonoBehaviour
 {
     //! Components
-    Animator characterAnimation;
-    Vector3 lastMousePosition;
+    private Animator characterAnimation;
+    private Vector3 lastMousePosition;
+    private SpriteRenderer spriteRenderer;
+    private bool wasFlipped;
 
-    SpriteRenderer spriteRenderer;
-
-    void Awake()
+    private void Awake()
     {
         InitializeComponents();
+        lastMousePosition = Input.mousePosition;
+        wasFlipped = spriteRenderer.flipX;
     }
 
-    void Update()
+    private void Update()
     {
         FlipSprite();
+        HandleFlipAnimation();
     }
 
-    void InitializeComponents()
+    private void InitializeComponents()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         characterAnimation = GetComponent<Animator>();
-
     }
 
-    void FlipSprite()
+    private void FlipSprite()
     {
         float movement = GetMouseHorizontalMovement();
 
@@ -35,22 +37,33 @@ public class CharacterAnimation : MonoBehaviour
         {
             // Moving left
             spriteRenderer.flipX = false;
-            characterAnimation.SetBool("isSwimming", true);
         }
         else if (movement > 0)
         {
             // Moving right
             spriteRenderer.flipX = true;
-            characterAnimation.SetBool("isSwimming", true);
         }
+
+        characterAnimation.SetBool("isSwimming", true);
     }
 
-    float GetMouseHorizontalMovement()
+    private float GetMouseHorizontalMovement()
     {
         Vector3 currentMousePosition = Input.mousePosition;
         float horizontalMovement = currentMousePosition.x - lastMousePosition.x;
         // Update last mouse position
         lastMousePosition = currentMousePosition;
         return horizontalMovement;
+    }
+
+    private void HandleFlipAnimation()
+    {
+        bool isCurrentlyFlipped = spriteRenderer.flipX;
+
+        if (isCurrentlyFlipped != wasFlipped)
+        {
+            characterAnimation.SetTrigger("turning");
+            wasFlipped = isCurrentlyFlipped;
+        }
     }
 }
