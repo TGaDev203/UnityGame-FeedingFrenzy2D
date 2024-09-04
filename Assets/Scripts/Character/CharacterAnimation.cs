@@ -11,20 +11,19 @@ public class CharacterAnimation : MonoBehaviour
     private Vector3 lastMousePosition;
     private SpriteRenderer spriteRenderer;
     private bool wasFlipped;
-    private Rigidbody2D rigidBody;
-    // private PreyAnimation preyAnimation;
+    private Rigidbody2D characterRigidBody;
 
     private void Awake()
     {
         InitializeComponents();
     }
 
+    //! Initialization
     private void InitializeComponents()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         characterAnimation = GetComponent<Animator>();
-        rigidBody = GetComponent<Rigidbody2D>();
-        // preyAnimation = GetComponent<PreyAnimation>();
+        characterRigidBody = GetComponent<Rigidbody2D>();
         wasFlipped = spriteRenderer.flipX;
         lastMousePosition = Input.mousePosition;
     }
@@ -79,7 +78,8 @@ public class CharacterAnimation : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         PreyAnimation preyAnimation = other.GetComponent<PreyAnimation>();
-        if (rigidBody.IsTouchingLayers(_layerEatable))
+        
+        if (characterRigidBody.IsTouchingLayers(_layerEatable))
         {
             characterAnimation.SetTrigger("eating");
             preyAnimation.DestroyPrey();

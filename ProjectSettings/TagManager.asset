@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Boundary
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -12,10 +11,10 @@ TagManager:
   - Eatable Prey
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Upper Boundary
+  - Lower Boundary
+  - Left Boundary
+  - Right Boundary
   - 
   - 
   - 

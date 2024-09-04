@@ -9,8 +9,6 @@ public class Characters : MonoBehaviour
     [SerializeField] private float rightPadding = 0.5f;
     [SerializeField] private float upperPadding;
     [SerializeField] private float lowerPadding;
-
-    [Header("Smooth Time")]
     [SerializeField] private float smoothTime;
     [SerializeField] private float mouseSensitivity;
     

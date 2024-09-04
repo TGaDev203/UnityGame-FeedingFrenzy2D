@@ -186,9 +186,9 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Minnow_1
       rect:
         serializedVersion: 2
-        x: 68
+        x: 69
         y: 55
-        width: 60
+        width: 59
         height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -207,9 +207,9 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Minnow_2
       rect:
         serializedVersion: 2
-        x: 134
+        x: 135
         y: 55
-        width: 60
+        width: 59
         height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -228,9 +228,9 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Minnow_3
       rect:
         serializedVersion: 2
-        x: 200
+        x: 201
         y: 55
-        width: 60
+        width: 59
         height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -249,9 +249,9 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Minnow_4
       rect:
         serializedVersion: 2
-        x: 266
+        x: 267
         y: 55
-        width: 60
+        width: 59
         height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -270,9 +270,9 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Minnow_5
       rect:
         serializedVersion: 2
-        x: 332
+        x: 333
         y: 55
-        width: 60
+        width: 59
         height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -291,9 +291,9 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Minnow_6
       rect:
         serializedVersion: 2
-        x: 398
+        x: 399
         y: 55
-        width: 60
+        width: 59
         height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -312,9 +312,9 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Minnow_7
       rect:
         serializedVersion: 2
-        x: 462
+        x: 464
         y: 55
-        width: 62
+        width: 60
         height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -333,9 +333,9 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Minnow_8
       rect:
         serializedVersion: 2
-        x: 530
+        x: 531
         y: 55
-        width: 60
+        width: 59
         height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -375,9 +375,9 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Minnow_10
       rect:
         serializedVersion: 2
-        x: 662
+        x: 663
         y: 55
-        width: 60
+        width: 59
         height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -396,9 +396,9 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Minnow_11
       rect:
         serializedVersion: 2
-        x: 728
+        x: 729
         y: 55
-        width: 60
+        width: 59
         height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -417,9 +417,9 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Minnow_12
       rect:
         serializedVersion: 2
-        x: 794
+        x: 795
         y: 55
-        width: 60
+        width: 59
         height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -438,9 +438,9 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Minnow_13
       rect:
         serializedVersion: 2
-        x: 860
+        x: 861
         y: 55
-        width: 60
+        width: 59
         height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -459,9 +459,9 @@ TextureImporter:
       name: PC Computer - Feeding Frenzy - Minnow_14
       rect:
         serializedVersion: 2
-        x: 926
+        x: 927
         y: 55
-        width: 62
+        width: 61
         height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
