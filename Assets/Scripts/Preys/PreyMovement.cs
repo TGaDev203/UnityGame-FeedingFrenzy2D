@@ -11,9 +11,7 @@ public class PreyMovement : MonoBehaviour
     [SerializeField] private float smoothTime;
     [SerializeField] private LayerMask _leftBoundaryLayerMask;
     [SerializeField] private LayerMask _rightBoundaryLayerMask;
-    private Vector3 velocity = Vector3.zero;
     private Rigidbody2D preyRigidBody;
-    private Camera mainCamera;
 
     private void Awake()
     {
@@ -24,7 +22,6 @@ public class PreyMovement : MonoBehaviour
     private void InitializeComponents()
     {
         preyRigidBody = GetComponent<Rigidbody2D>();
-        mainCamera = Camera.main;
     }
 
     private void Update()
