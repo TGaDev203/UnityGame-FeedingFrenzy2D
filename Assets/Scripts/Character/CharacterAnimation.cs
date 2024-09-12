@@ -1,9 +1,9 @@
+using System;
 using UnityEngine;
 
 public class CharacterAnimation : MonoBehaviour
 {
     //! Components
-    // Define a small threshold to prevent continuous flipping
     [SerializeField] private float flipThreshold;
     [SerializeField] private LayerMask _layerEatable;
 
@@ -30,26 +30,17 @@ public class CharacterAnimation : MonoBehaviour
 
     private void Update()
     {
-        FlipSprite();
+        HandleFlipSprite();
         HandleFlipAnimation();
     }
 
-    private void FlipSprite()
+    private void HandleFlipSprite()
     {
         float movement = GetMouseHorizontalMovement();
 
         if (Mathf.Abs(movement) > flipThreshold)
         {
-            if (movement < 0)
-            {
-                // Moving left
-                spriteRenderer.flipX = false;
-            }
-            else if (movement > 0)
-            {
-                // Moving right
-                spriteRenderer.flipX = true;
-            }
+            (movement < 0 ? (Action) StopFlipSprite : FlipSprite)();
         }
 
         characterAnimation.SetBool("isIdling", true);
@@ -78,11 +69,21 @@ public class CharacterAnimation : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         PreyAnimation preyAnimation = other.GetComponent<PreyAnimation>();
-        
+
         if (characterRigidBody.IsTouchingLayers(_layerEatable))
         {
             characterAnimation.SetTrigger("eating");
             preyAnimation.DestroyPrey();
         }
+    }
+
+    public void FlipSprite()
+    {
+        spriteRenderer.flipX = true;
+    }
+
+    public void StopFlipSprite()
+    {
+        spriteRenderer.flipX = false;
     }
 }

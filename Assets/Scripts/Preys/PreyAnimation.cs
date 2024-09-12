@@ -5,7 +5,6 @@ public class PreyAnimation : MonoBehaviour
 {
     //! Components
     [SerializeField] private float destroyDelay;
-    private Rigidbody2D preyRigidBody;
     private SpriteRenderer spriteRenderer;
 
     private void Awake()
@@ -16,7 +15,6 @@ public class PreyAnimation : MonoBehaviour
     //! Initialize Components
     private void InitializeComponents()
     {
-        preyRigidBody = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 

@@ -465,7 +465,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.3363632, y: -0.4758988, z: -9.979419}
+  m_LocalPosition: {x: -1.0160632, y: -0.1796988, z: -9.979419}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -752,7 +752,7 @@ Transform:
   m_GameObject: {fileID: 730579342}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.3203, y: -0.2962, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.47485435, y: 0.4248999, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -890,6 +890,8 @@ MonoBehaviour:
   lowerPadding: 0.2
   smoothTime: 0.1
   mouseSensitivity: 0.1
+  initializeYPosition: 5.5
+  fallSpeed: 1
 --- !u!114 &730579348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -942,6 +944,7 @@ GameObject:
   - component: {fileID: 840268202}
   - component: {fileID: 840268201}
   - component: {fileID: 840268203}
+  - component: {fileID: 840268204}
   m_Layer: 3
   m_Name: Minow Fish
   m_TagString: Untagged
@@ -1090,7 +1093,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e6222ec065ab14e9daff7f9124252f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyDelay: 0.1
+  destroyDelay: 0
 --- !u!95 &840268202
 Animator:
   serializedVersion: 5
@@ -1125,17 +1128,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
-  leftPadding: 0.38
-  rightPadding: 0.38
-  upperPadding: 0.2
-  lowerPadding: 0.2
-  smoothTime: 0.1
+  leftPadding: 0
+  rightPadding: 0
+  upperPadding: 0
+  lowerPadding: 0
+  smoothTime: 0
   _leftBoundaryLayerMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
   _rightBoundaryLayerMask:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 0
+--- !u!114 &840268204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 840268195}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23883d993c239f7439217fd957305385, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  avoidanceDistance: 5
+  boundaryBuffer: 1
+  boundaryMin: {x: 0, y: 0}
+  boundaryMax: {x: 0, y: 0}
 --- !u!1 &858025457
 GameObject:
   m_ObjectHideFlags: 0
@@ -1202,7 +1222,7 @@ Transform:
   m_GameObject: {fileID: 858025457}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.3363632, y: -0.4758988, z: -9.979419}
+  m_LocalPosition: {x: -1.0160632, y: -0.1796988, z: -9.979419}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

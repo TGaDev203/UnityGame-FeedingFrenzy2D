@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PreyMovement : MonoBehaviour
 {
@@ -29,11 +30,11 @@ public class PreyMovement : MonoBehaviour
         HandleMovement();
     }
 
-
     private void HandleMovement()
     {
         // Move prey to the left continuously
         preyRigidBody.velocity = new Vector2(-moveSpeed, preyRigidBody.velocity.y);
+        // preyRigidBody.velocity = new Vector2()
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -42,14 +43,12 @@ public class PreyMovement : MonoBehaviour
 
         if (preyRigidBody.IsTouchingLayers(_leftBoundaryLayerMask))
         {
-            moveSpeed = -moveSpeed;
-            preyAnimation.FlipSprite();
+            preyAnimation.DestroyPrey();
         }
 
         if (preyRigidBody.IsTouchingLayers(_rightBoundaryLayerMask))
         {
-            moveSpeed = -moveSpeed;
-            preyAnimation.StopFlipSprite();
+            preyAnimation.DestroyPrey();
         }
     }
 }

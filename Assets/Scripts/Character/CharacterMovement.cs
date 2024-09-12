@@ -1,22 +1,31 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Characters : MonoBehaviour
 {
-    private bool isPlaying = false;
-
     [Header("Padding")]
-    [SerializeField] private float leftPadding = 0.5f;
-    [SerializeField] private float rightPadding = 0.5f;
+    [SerializeField] private float leftPadding;
+    [SerializeField] private float rightPadding;
     [SerializeField] private float upperPadding;
     [SerializeField] private float lowerPadding;
     [SerializeField] private float smoothTime;
     [SerializeField] private float mouseSensitivity;
-    
+    [SerializeField] private float initializeYPosition;
+    [SerializeField] private float fallSpeed;
+    private bool isPlaying = false;
     private Vector3 targetPosition;
     private Vector3 velocity = Vector3.zero;
+    private SpriteRenderer spriteRenderer;
+
+    private void Start()
+    {
+        transform.position = new Vector3(0, initializeYPosition, 0);
+    }
 
     private void Update()
     {
+        FallToCenter();
+
         if (isPlaying)
         {
             HandleMovementByMouse();
@@ -42,7 +51,7 @@ public class Characters : MonoBehaviour
 
         // Calculate screen bounds in world units using viewport space
         Camera camera = Camera.main;
-        
+
         // Convert viewport bounds to world space
         Vector3 lowerLeft = camera.ViewportToWorldPoint(new Vector3(0, 0, camera.nearClipPlane));
         Vector3 upperRight = camera.ViewportToWorldPoint(new Vector3(1, 1, camera.nearClipPlane));
@@ -69,5 +78,16 @@ public class Characters : MonoBehaviour
         Cursor.visible = false;
         // Limit mouse cursor in game window
         Cursor.lockState = CursorLockMode.Confined;
+    }
+
+    private void FallToCenter()
+    {
+        targetPosition = new Vector3(transform.position.x, 0, transform.position.y);
+        transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, fallSpeed);
+
+        if (Mathf.Abs(transform.position.y) == 0)
+        {
+            transform.position = targetPosition;
+        }
     }
 }
